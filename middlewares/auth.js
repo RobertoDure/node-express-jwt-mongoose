@@ -1,3 +1,5 @@
+// authorization controller provider// 
+
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.json');
 
@@ -24,7 +26,7 @@ module.exports = (req, res, next) => {
         req.userId = decoded.id;
         req.userEmail = decoded.email;
         req.userName = decoded.name;
-        return next();
+        return next();   
     });
 
 };
